@@ -5,7 +5,7 @@ services:
     build:
       context: .
     ports:
-      - "${PORT}:4000"
+      - "${EXTERNAL_PORT}:4000"
     init: true
     env_file:
       .env
