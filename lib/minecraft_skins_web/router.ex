@@ -9,6 +9,6 @@ defmodule MinecraftSkinsWeb.Router do
     pipe_through :api
 
     get "/", Index, :show
-    get "/head/:id", Heads, :show
+    get "/head/:id_and_ext", Heads, :show
   end
 end

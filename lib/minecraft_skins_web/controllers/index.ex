@@ -3,7 +3,7 @@ defmodule MinecraftSkinsWeb.Index do
 
   def show(conn, _params) do
     json conn, %{
-      author: "https://github.com/Iapetus-11",
+      repository_and_docs: "https://github.com/Iapetus-11/minecraft-skins",
     }
   end
 end
