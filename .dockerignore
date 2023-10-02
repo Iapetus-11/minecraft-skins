@@ -26,3 +26,5 @@ erl_crash.dump
 Dockerfile
 docker-compose.yml
 README.md
+.dockerignore
+.gitignore
