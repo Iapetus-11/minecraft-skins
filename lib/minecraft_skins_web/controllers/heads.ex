@@ -55,7 +55,7 @@ defmodule MinecraftSkinsWeb.Heads do
             |> send_resp(200, image_data)
         end
 
-      errors -> resp(conn, 400, Poison.encode!(errors))
+      errors -> resp(conn, 400, Jason.encode!(errors))
     end
   end
 end

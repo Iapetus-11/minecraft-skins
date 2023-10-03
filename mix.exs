@@ -38,7 +38,6 @@ defmodule MinecraftSkins.MixProject do
       {:plug_cowboy, "~> 2.5"},
       {:image, "~> 0.37"},
       {:httpoison, "~> 2.0"},
-      {:poison, "~> 5.0"},
       {:cachex, "~> 3.6"},
       {:uuid, "~> 1.1.8"},
     ]
@@ -51,6 +50,8 @@ defmodule MinecraftSkins.MixProject do
   #
   # See the documentation for `Mix` for more info on aliases.
   defp aliases do
-    []
+    [
+      setup: ["deps.get"]
+    ]
   end
 end

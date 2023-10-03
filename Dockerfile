@@ -18,7 +18,7 @@ ENV LANG=C.UTF-8
 ENV PHX_HOST=0.0.0.0
 ENV PHX_SERVER=true
 
-RUN apk add build-base ncurses
+RUN apk add --no-cache gcc ncurses
 
 WORKDIR /minecraft-skins
 

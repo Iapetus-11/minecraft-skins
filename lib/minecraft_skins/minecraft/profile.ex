@@ -14,7 +14,7 @@ defmodule Minecraft.Profile do
     HTTPoison.get("https://sessionserver.mojang.com/session/minecraft/profile/#{id}")
     |> then(
       &case &1 do
-        {:ok, response} when response.status_code == 200 -> Poison.decode(response.body)
+        {:ok, response} when response.status_code == 200 -> Jason.decode(response.body)
         _ -> :err
       end
     )
@@ -43,7 +43,7 @@ defmodule Minecraft.Profile do
     profile["properties"]
     |> Enum.find(&(&1["name"] == property))
     |> then(&Base.decode64!(&1["value"]))
-    |> Poison.decode!()
+    |> Jason.decode!()
   end
 
   @spec get_skin_texture_url(minecraft_user_profile) :: String.t
