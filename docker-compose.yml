@@ -9,3 +9,9 @@ services:
     init: true
     env_file:
       .env
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:4000"]
+      interval: 5m
+      timeout: 10s
+      retries: 2
+      start_period: 10s
